@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>廖浩淳的个人博客</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on 廖浩淳的个人博客</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 Apr 2024 23:27:11 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
+      <title>我的第一篇博客</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Tue, 23 Apr 2024 23:27:11 +0800</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>first post</description>
+      <description>你好，这里是廖浩淳的个人博客，很高兴你能来看我的博客。
+我是廖浩淳（liaohch3），一名在 SaaS 行业工作了四年的后端工程师，熟悉 Golang 后端开发，对 MySQL、RocketMQ、ElasticSearch、Redis 等技术感兴趣。
+我喜欢阅读、编程和健身，希望通过博客分享我的经验和见解。我正在练习写作，如你所见，我在这方面是一个十足的菜鸟，希望能通过持续输出博客内容来提升自己的写作能力。
+创建这个博客是因为我最近读了《软技能》这本书，我会在这里记录我从工作、学习和生活中获得的思考，希望能对你有所帮助。如果你对我的博客内容感兴趣，或者有不同的看法，请留下你的评论，谢谢。</description>
     </item>
   </channel>
 </rss>
