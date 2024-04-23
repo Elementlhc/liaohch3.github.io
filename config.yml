@@ -1,0 +1,6 @@
+baseURL: https://jaredyam.github.io
+languageCode: en-us
+defaultContentLanguage: zh
+title: 👨‍🌾 Jared Yam
+# 主题
+theme: PaperMod
