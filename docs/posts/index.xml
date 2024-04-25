@@ -6,8 +6,20 @@
     <description>Recent content in Posts on 廖浩淳的个人博客</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Apr 2024 23:27:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2024 13:13:41 +0800</lastBuildDate>
     <atom:link href="https://liaohch3.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang defer 关键字的三个细节</title>
+      <link>https://liaohch3.github.io/posts/golang-defer/</link>
+      <pubDate>Thu, 25 Apr 2024 13:13:41 +0800</pubDate>
+      <guid>https://liaohch3.github.io/posts/golang-defer/</guid>
+      <description>这是我第一篇正式的技术博客，灵感来自前段时间某位同事向我请教的问题：为什么 Golang defer 函数没有按预期执行？我觉得这是一个很容易踩坑的点，所以我在网上学习后，写出这篇博客。
+1. defer 的作用 在 Golang 中，我们常常需要编写一些成对出现的代码，一个前置操作固定搭配一个后置操作，例如
+上锁后，要解锁 打开文件，或发起网络请求后，执行文件/网络句柄的关闭操作 执行完一段业务逻辑后，统一打印这段逻辑的业务日志和耗时 通常我们需要在执行完前置操作后，执行一段复杂的业务逻辑，然后再执行后置操作。例如发起打开文件后，解析对文件的内容进行解析，然后再关闭文件句柄，打开和关闭文件两个操作可能中间间隔一段复杂的业务逻辑。 如果将关闭文件、打印日志、解锁操作放在与他们成对出现的前置操作太远的地方，就会导致我们可能在某些执行分支遗漏编写后置语句，导致文件没有正常关闭，锁没有正常释放。
+好在，Golang 提供了 defer 关键字，方便你在前置操作完成后，写一个后置操作的代码，等到整段业务逻辑执行完成，再执行 defer 中的操作。 然而，defer 在使用时有一些值得注意的地方，如果用得不好的话，可能会有不符合预期的事情发生。
+2. 问题现象 我的同事使用 defer 来打印请求的整体日志和整体耗时，他在 debug 的时候发现日志里打印出来的内容都是 0，大概的代码如下
+// process 执行某项操作，并记录结果、错误（如果有的话）以及执行时长。 func process() (result string, err error) { start := time.Now() defer logReq(result, err, start) // 调用 doSomething 并将结果赋值给 result 和 err。 result, err = doSomething() if err != nil { return &amp;#34;&amp;#34;, err } return result, nil } // doSomething 模拟一个需要一些时间来完成的过程。 func doSomething() (string, error) { time.</description>
+    </item>
     <item>
       <title>我的第一篇博客</title>
       <link>https://liaohch3.github.io/posts/my-first-post/</link>
