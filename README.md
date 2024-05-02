@@ -13,7 +13,7 @@
 3. `hugo -d docs` 生成静态文件
 
 
-3. git add . && git commit -m "xxx" && git push 推送到 GitHub
+3. `git add . && git commit -m "xxx" && git push` 推送到 GitHub
 
 
 4. 稍等片刻，完成部署后，点击 https://liaohch3.github.io 确认部署情况

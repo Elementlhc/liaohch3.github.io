@@ -1,271 +1,340 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>我的第一篇博客 | 廖浩淳的个人博客</title>
-<meta name="keywords" content="">
-<meta name="description" content="你好，这里是廖浩淳的个人博客，很高兴你能来看我的博客。
-我是廖浩淳（liaohch3），一名在 SaaS 行业工作了四年的后端工程师，熟悉 Golang 后端开发，对 MySQL、RocketMQ、ElasticSearch、Redis 等技术感兴趣。
-我喜欢阅读、编程和健身，希望通过博客分享我的经验和见解。我正在练习写作，如你所见，我在这方面是一个十足的菜鸟，希望能通过持续输出博客内容来提升自己的写作能力。
-创建这个博客是因为我最近读了《软技能》这本书，我会在这里记录我从工作、学习和生活中获得的思考，希望能对你有所帮助。如果你对我的博客内容感兴趣，或者有不同的看法，请留下你的评论，谢谢。">
-<meta name="author" content="">
-<link rel="canonical" href="https://liaohch3.github.io/posts/my-first-post/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://liaohch3.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://liaohch3.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://liaohch3.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://liaohch3.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://liaohch3.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://liaohch3.github.io/posts/my-first-post/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:title" content="我的第一篇博客" />
-<meta property="og:description" content="你好，这里是廖浩淳的个人博客，很高兴你能来看我的博客。
-我是廖浩淳（liaohch3），一名在 SaaS 行业工作了四年的后端工程师，熟悉 Golang 后端开发，对 MySQL、RocketMQ、ElasticSearch、Redis 等技术感兴趣。
-我喜欢阅读、编程和健身，希望通过博客分享我的经验和见解。我正在练习写作，如你所见，我在这方面是一个十足的菜鸟，希望能通过持续输出博客内容来提升自己的写作能力。
-创建这个博客是因为我最近读了《软技能》这本书，我会在这里记录我从工作、学习和生活中获得的思考，希望能对你有所帮助。如果你对我的博客内容感兴趣，或者有不同的看法，请留下你的评论，谢谢。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://liaohch3.github.io/posts/my-first-post/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-04-23T23:27:11+08:00" />
-<meta property="article:modified_time" content="2024-04-23T23:27:11+08:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="我的第一篇博客"/>
-<meta name="twitter:description" content="你好，这里是廖浩淳的个人博客，很高兴你能来看我的博客。
-我是廖浩淳（liaohch3），一名在 SaaS 行业工作了四年的后端工程师，熟悉 Golang 后端开发，对 MySQL、RocketMQ、ElasticSearch、Redis 等技术感兴趣。
-我喜欢阅读、编程和健身，希望通过博客分享我的经验和见解。我正在练习写作，如你所见，我在这方面是一个十足的菜鸟，希望能通过持续输出博客内容来提升自己的写作能力。
-创建这个博客是因为我最近读了《软技能》这本书，我会在这里记录我从工作、学习和生活中获得的思考，希望能对你有所帮助。如果你对我的博客内容感兴趣，或者有不同的看法，请留下你的评论，谢谢。"/>
+<html><head>
+<title>我的第一篇博客</title>
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://liaohch3.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "我的第一篇博客",
-      "item": "https://liaohch3.github.io/posts/my-first-post/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "我的第一篇博客",
-  "name": "我的第一篇博客",
-  "description": "你好，这里是廖浩淳的个人博客，很高兴你能来看我的博客。\n我是廖浩淳（liaohch3），一名在 SaaS 行业工作了四年的后端工程师，熟悉 Golang 后端开发，对 MySQL、RocketMQ、ElasticSearch、Redis 等技术感兴趣。\n我喜欢阅读、编程和健身，希望通过博客分享我的经验和见解。我正在练习写作，如你所见，我在这方面是一个十足的菜鸟，希望能通过持续输出博客内容来提升自己的写作能力。\n创建这个博客是因为我最近读了《软技能》这本书，我会在这里记录我从工作、学习和生活中获得的思考，希望能对你有所帮助。如果你对我的博客内容感兴趣，或者有不同的看法，请留下你的评论，谢谢。",
-  "keywords": [
-    
-  ],
-  "articleBody": "你好，这里是廖浩淳的个人博客，很高兴你能来看我的博客。\n我是廖浩淳（liaohch3），一名在 SaaS 行业工作了四年的后端工程师，熟悉 Golang 后端开发，对 MySQL、RocketMQ、ElasticSearch、Redis 等技术感兴趣。\n我喜欢阅读、编程和健身，希望通过博客分享我的经验和见解。我正在练习写作，如你所见，我在这方面是一个十足的菜鸟，希望能通过持续输出博客内容来提升自己的写作能力。\n创建这个博客是因为我最近读了《软技能》这本书，我会在这里记录我从工作、学习和生活中获得的思考，希望能对你有所帮助。如果你对我的博客内容感兴趣，或者有不同的看法，请留下你的评论，谢谢。\n",
-  "wordCount" : "10",
-  "inLanguage": "en",
-  "datePublished": "2024-04-23T23:27:11+08:00",
-  "dateModified": "2024-04-23T23:27:11+08:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://liaohch3.github.io/posts/my-first-post/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "廖浩淳的个人博客",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://liaohch3.github.io/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
 
-<body class="" id="top">
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="你好，这里是 liaohch3 的个人博客，很高兴你能来看我的博客。">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BTHTZ3RQ3M"></script>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BTHTZ3RQ3M', { 'anonymize_ip': false });
+}
 </script>
 
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://liaohch3.github.io/" accesskey="h" title="廖浩淳的个人博客 (Alt + H)">廖浩淳的个人博客</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-        </ul>
-    </nav>
-</header>
-<main class="main">
 
-<article class="post-single">
-  <header class="post-header">
+
+
+
+
+
+  
+
+
+
+
+
+
+      <script src="/js/toc.js"></script>
     
-    <h1 class="post-title entry-hint-parent">
-      我的第一篇博客
-    </h1>
-    <div class="post-meta"><span title='2024-04-23 23:27:11 +0800 CST'>April 23, 2024</span>
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+<script defer
+	src='https://static.cloudflareinsights.com/beacon.min.js'
+	data-cf-beacon='{"token": "cU9Z_VM-lskry80spcTKiFuOUvvnjOcFKAaUjQh7"}'>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    文章
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    分类
+                </a>
+                
+            
+            
+            <div class="toc">
+
 
 </div>
-  </header> 
-  <div class="post-content"><p>你好，这里是廖浩淳的个人博客，很高兴你能来看我的博客。</p>
-<p>我是廖浩淳（liaohch3），一名在 SaaS 行业工作了四年的后端工程师，熟悉 Golang 后端开发，对 MySQL、RocketMQ、ElasticSearch、Redis 等技术感兴趣。</p>
-<p>我喜欢阅读、编程和健身，希望通过博客分享我的经验和见解。我正在练习写作，如你所见，我在这方面是一个十足的菜鸟，希望能通过持续输出博客内容来提升自己的写作能力。</p>
-<p>创建这个博客是因为我最近读了《软技能》这本书，我会在这里记录我从工作、学习和生活中获得的思考，希望能对你有所帮助。如果你对我的博客内容感兴趣，或者有不同的看法，请留下你的评论，谢谢。</p>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://liaohch3.github.io/">
+            liaohch3 的个人博客
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://liaohch3.github.io/">
+        <div class="single-column-header-title">liaohch3 的个人博客</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    我的第一篇博客
+                    
+                    <div class="post-subtitle">
+                        你好，这里是 liaohch3 的个人博客，很高兴你能来看我的博客。
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2024-04-23 23:27
+                        </time>
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>你好，这里是 liaohch3 的个人博客，很高兴你能来看我的博客。</p>
+<p>我是 liaohch3，一名在 SaaS 行业工作了四年的后端工程师，主要做在线表格的开发工作，熟悉 Golang 后端开发，对 MySQL、RocketMQ、ElasticSearch、Redis 等技术感兴趣，希望能将大模型和 AI 应用到在线表格中，实现真正的用户价值😁。</p>
+<p>我喜欢阅读、编程和健身，希望通过博客分享我的经验和见解。我正在练习写作，如你所见，在这方面我是一个十足的菜鸟，希望能通过持续输出博客内容来提升自己的写作能力。</p>
+<p>创建这个博客是因为我最近读了《软技能》这本书，我希望能讲我平常学习到的知识，在工作和生活中的感悟记录在这里，通过传递知识来加强自己的理解。</p>
+<p>希望我的博客能对你有所帮助，如果你对内容感兴趣，或者有不同的看法，请留下你的评论，谢谢。</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">最后修改于 2024-04-23</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/golang-defer/">
+			下回<br>Golang defer 关键字的三个细节
+                </a>
+                
+                
+                
+                <a class="older-posts">
+			上回<br>这是最旧的文章了。
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
 
 
-  </div>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-  </footer>
-</article>
-    </main>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
     
-<footer class="footer">
-        <span>&copy; 2024 <a href="https://liaohch3.github.io/">廖浩淳的个人博客</a></span> · 
+    <a class="a-block nav-head false" href="https://liaohch3.github.io/">
+    
+        <div class="nav-title">
+            liaohch3 的个人博客
+        </div>
+        
+    </a>
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                文章
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                分类
+            </a>
+            
+        
+    </div>
 
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+    
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
 
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
+&copy;
+	
+	2024 liaohch3 的个人博客
+	
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
 
-</script>
-</body>
+        
+        <div class="toc">
 
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+
+<div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2024 liaohch3 的个人博客
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
 </html>

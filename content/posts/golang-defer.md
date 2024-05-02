@@ -1,7 +1,9 @@
 +++
 title = 'Golang defer 关键字的三个细节'
+description = '本文介绍 Golang 中使用 defer 关键字容易踩坑的三个细节，帮助你写出更优雅的代码。'
 date = 2024-04-25T13:13:41+08:00
 draft = false
+tags = ["golang", "code"]
 +++
 
 这是我第一篇正式的技术博客，灵感来自前段时间某位同事向我请教的问题：为什么 Golang defer 函数没有按预期执行？我觉得这是一个很容易踩坑的点，所以我在网上学习后，写出这篇博客。

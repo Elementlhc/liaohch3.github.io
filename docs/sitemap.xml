@@ -2,20 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://liaohch3.github.io/</loc>
+    <lastmod>2024-05-02T22:08:11+08:00</lastmod>
+  </url><url>
+    <loc>https://liaohch3.github.io/posts/</loc>
+    <lastmod>2024-05-02T22:08:11+08:00</lastmod>
+  </url><url>
+    <loc>https://liaohch3.github.io/tags/code/</loc>
+    <lastmod>2024-04-25T13:13:41+08:00</lastmod>
+  </url><url>
+    <loc>https://liaohch3.github.io/tags/golang/</loc>
+    <lastmod>2024-04-25T13:13:41+08:00</lastmod>
+  </url><url>
     <loc>https://liaohch3.github.io/posts/golang-defer/</loc>
     <lastmod>2024-04-25T13:13:41+08:00</lastmod>
   </url><url>
-    <loc>https://liaohch3.github.io/posts/</loc>
-    <lastmod>2024-04-25T13:13:41+08:00</lastmod>
-  </url><url>
-    <loc>https://liaohch3.github.io/</loc>
+    <loc>https://liaohch3.github.io/tags/</loc>
     <lastmod>2024-04-25T13:13:41+08:00</lastmod>
   </url><url>
     <loc>https://liaohch3.github.io/posts/my-first-post/</loc>
     <lastmod>2024-04-23T23:27:11+08:00</lastmod>
   </url><url>
     <loc>https://liaohch3.github.io/categories/</loc>
-  </url><url>
-    <loc>https://liaohch3.github.io/tags/</loc>
   </url>
 </urlset>
